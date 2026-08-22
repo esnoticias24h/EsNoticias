@@ -236,7 +236,7 @@ async function esnRenderNoticia() {
     document.title = `${n.title} — EsNoticias`;
     const img = n.imagen ? `<div class="lead-img"><img src="${esnEscapeHtml(n.imagen)}" alt=""></div>` : "";
     cont.innerHTML = `
-      <article style="max-width:760px;margin:0 auto;padding:40px 0;">
+      <article style="max-width:760px;margin:0 auto;padding:40px 20px;">
         <span class="eyebrow" style="color:var(--red);">${esnEscapeHtml(n.categoria)}</span>
         <h1 style="font-size:34px;margin:10px 0 14px;">${esnEscapeHtml(n.title)}</h1>
         <div class="byline" style="margin-bottom:20px;"><span>${esnEscapeHtml(n.autor)}</span><span class="dot"></span><span>${esnFormatFecha(n.date)}</span></div>
