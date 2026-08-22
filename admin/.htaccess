@@ -1,0 +1,11 @@
+# Proteger archivos sensibles
+<Files "config.php">
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+# Redirigir a login si no está autenticado
+RewriteEngine On
+RewriteCond %{REQUEST_URI} !^/admin/login.php
+RewriteCond %{HTTP_COOKIE} !session= [NC]
+RewriteRule ^(.*)$ login.php [L]
