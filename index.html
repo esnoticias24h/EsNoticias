@@ -166,6 +166,16 @@
   </div>
 </div>
 
+<div class="wrap">
+
+  <div class="masthead">
+    <div class="logo">Es<span>Noticias</span></div>
+    <div class="masthead-right">
+      <span class="date-label" id="dateLabel"></span>
+      <div class="icon-btn" title="Buscar">🔍</div>
+    </div>
+  </div>
+
   <nav class="nav">
     <a href="index.html">Portada</a>
     <a href="seccion.html?cat=Actualidad">Actualidad</a>
@@ -201,8 +211,10 @@
         <h2>Las noticias del día, en 5 minutos.</h2>
         <p>Un resumen claro cada mañana, directo a tu correo, sin ruido ni titulares vacíos.</p>
       </div>
-      <form class="newsletter-form" onsubmit="return false;">
-        <input type="email" placeholder="tu@email.com" required>
+      <form class="newsletter-form" method="POST" action="https://7f5d0035.sibforms.com/serve/MUIFACEyWFFqVSXuw0gA1_-cKPsgWYbKKvwddwTrhtYE8JnP3VZgxgweh0-tYMaXsxq6VVXnnlIhcMIO6KkP_hIaVv4mLHmNP9mpzHC53thePp4V7L_xvOWuEpjlOOxU7PSWhibfsbrr36kUNd-eRQlYt7tCdMeusj6Dxnkvpp0k9o6t89f7MfjQVHhrKnKl8-lkEMHwx2taDmC7qQ==">
+        <input type="email" name="EMAIL" placeholder="tu@email.com" required>
+        <input type="text" name="email_address_check" value="" style="display:none;">
+        <input type="hidden" name="locale" value="es">
         <button type="submit">Suscribirme</button>
       </form>
     </div>
