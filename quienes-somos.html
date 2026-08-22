@@ -166,7 +166,7 @@
 </div>
 
   <nav class="nav">
-    <a href="index.html" class="active">Portada</a>
+    <a href="index.html">Portada</a>
     <a href="seccion.html?cat=Nacional">Nacional</a>
     <a href="seccion.html?cat=Internacional">Internacional</a>
     <a href="seccion.html?cat=Economía">Economía</a>
@@ -175,62 +175,28 @@
     <a href="seccion.html?cat=Opinión">Opinión</a>
   </nav>
 
-  <div id="esn-portada">
-    <p style="padding:60px 0;text-align:center;color:var(--slate);">Cargando noticias…</p>
-  </div>
+  <article style="max-width:720px;margin:0 auto;padding:50px 0 60px;">
+    <span class="eyebrow" style="color:var(--red);">El medio</span>
+    <h1 style="font-size:34px;margin:10px 0 24px;">Quiénes somos</h1>
 
-  <div class="newsletter">
-    <div class="wrap newsletter-inner">
-      <div>
-        <h2>Las noticias del día, en 5 minutos.</h2>
-        <p>Un resumen claro cada mañana, directo a tu correo, sin ruido ni titulares vacíos.</p>
-      </div>
-      <form class="newsletter-form" onsubmit="return false;">
-        <input type="email" placeholder="tu@email.com" required>
-        <button type="submit">Suscribirme</button>
-      </form>
+    <div style="font-size:17px;line-height:1.75;color:var(--ink-soft);">
+      <p>EsNoticias es un medio digital de información general que nace con un objetivo sencillo: contar lo que ocurre en España y en el mundo con claridad, rigor y sin ruido innecesario.</p>
+
+      <p>Somos un proyecto que acaba de empezar. Todavía estamos dando forma a nuestras secciones, a nuestro equipo y a la manera en que contamos las historias — pero desde el primer día nos comprometemos con los mismos principios que rigen a cualquier medio serio: contrastar la información antes de publicarla, separar los hechos de la opinión, y corregir con transparencia cuando nos equivocamos.</p>
+
+      <p>Creemos que el periodismo digital puede ser a la vez riguroso y cercano, especialmente para los lectores más jóvenes, que merecen información de calidad contada de forma directa y sin paternalismos.</p>
+
+      <p>Si tienes sugerencias, correcciones o quieres proponernos una historia, en la página de <a href="contacto.html" style="color:var(--red);">Contacto</a> tienes nuestros datos.</p>
     </div>
-  </div>
+  </article>
 
   <footer>
-    <div class="footer-grid">
-      <div>
-        <div class="logo">Es<span>Noticias</span></div>
-        <p>Información clara y contrastada sobre lo que ocurre en España y en el mundo.</p>
-      </div>
-      <div class="footer-col">
-        <h4>Secciones</h4>
-        <a href="seccion.html?cat=Nacional">Nacional</a>
-        <a href="seccion.html?cat=Internacional">Internacional</a>
-        <a href="seccion.html?cat=Economía">Economía</a>
-        <a href="seccion.html?cat=Tecnología">Tecnología</a>
-      </div>
-      <div class="footer-col">
-        <h4>Más</h4>
-        <a href="seccion.html?cat=Cultura">Cultura</a>
-        <a href="seccion.html?cat=Opinión">Opinión</a>
-      </div>
-      <div class="footer-col">
-        <h4>El medio</h4>
-        <a href="quienes-somos.html">Quiénes somos</a>
-        <a href="contacto.html">Contacto</a>
-      </div>
-    </div>
     <div class="footer-bottom">
       <span>© 2026 EsNoticias. Todos los derechos reservados.</span>
-      <span>Aviso legal · Privacidad · Cookies</span>
+      <a href="index.html" style="color:var(--red);">Volver a portada</a>
     </div>
   </footer>
 
 </div>
-
-<script>
-  const dateLabel = document.getElementById('dateLabel');
-  const today = new Date();
-  dateLabel.textContent = today.toLocaleDateString('es-ES', { weekday: 'long', day: 'numeric', month: 'long' });
-</script>
-<script src="assets/noticias.js"></script>
-<script>esnRenderPortada();</script>
-
 </body>
 </html>
