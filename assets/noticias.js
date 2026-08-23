@@ -33,24 +33,65 @@ function esnMarkdownToHtml(md) {
     .join("\n");
 }
 
-// Parser simple de "front matter" YAML (las líneas entre --- ... ---)
+// Parser de "front matter" YAML (líneas entre --- ... ---).
+// Soporta valores simples y listas (formato bloque "- item" o formato en línea ["a","b"]),
+// para permitir campos como "categorias" con varias opciones marcadas.
 function esnParseFrontMatter(raw) {
   const match = raw.match(/^---\s*\n([\s\S]*?)\n---\s*\n?([\s\S]*)$/);
   if (!match) return { data: {}, body: raw };
   const [, yaml, body] = match;
+  const lines = yaml.split("\n");
   const data = {};
-  yaml.split("\n").forEach(line => {
-    const m = line.match(/^([a-zA-Z0-9_]+):\s*(.*)$/);
-    if (!m) return;
-    let value = m[2].trim();
+  let i = 0;
+
+  function cleanScalar(value) {
+    value = value.trim();
     if (
       (value.startsWith('"') && value.endsWith('"')) ||
       (value.startsWith("'") && value.endsWith("'"))
     ) {
       value = value.slice(1, -1);
     }
-    data[m[1]] = value;
-  });
+    return value;
+  }
+
+  while (i < lines.length) {
+    const line = lines[i];
+    const m = line.match(/^([a-zA-Z0-9_]+):\s*(.*)$/);
+    if (!m) { i++; continue; }
+    const key = m[1];
+    let value = m[2].trim();
+
+    if (value.startsWith("[") && value.endsWith("]")) {
+      // Lista en línea: ["Nacional", "Sucesos"]
+      data[key] = value
+        .slice(1, -1)
+        .split(",")
+        .map(v => cleanScalar(v))
+        .filter(v => v.length > 0);
+      i++;
+      continue;
+    }
+
+    if (value === "") {
+      // Puede ser una lista en formato bloque en las líneas siguientes
+      const listItems = [];
+      let j = i + 1;
+      while (j < lines.length && /^\s*-\s+/.test(lines[j])) {
+        listItems.push(cleanScalar(lines[j].replace(/^\s*-\s+/, "")));
+        j++;
+      }
+      if (listItems.length > 0) {
+        data[key] = listItems;
+        i = j;
+        continue;
+      }
+    }
+
+    data[key] = cleanScalar(value);
+    i++;
+  }
+
   return { data, body: body.trim() };
 }
 
@@ -66,18 +107,24 @@ function esnFormatFecha(iso) {
 }
 
 const ESN_CAT_COLOR = {
+  "Actualidad": "gray",
   "Nacional": "red",
-  "Internacional": "blue",
   "Europa": "blue",
   "Palestina": "amber",
   "Sáhara Occidental": "amber",
   "Ucrania": "blue",
   "América": "blue",
-  "Oriente Medio": "amber",
   "Asia": "blue",
-  "Sucesos": "red",
+  "Oriente Medio": "amber",
   "Política": "red",
-  "Actualidad": "gray",
+  "Economía": "amber",
+  "Sociedad": "gray",
+  "Sucesos": "red",
+  "Cultura": "blue",
+  "Deportes": "gray",
+  "Tecnología": "gray",
+  "Ciencia": "blue",
+  "Salud": "amber",
   "Opinión": "amber",
   "Otros": "gray"
 };
@@ -96,10 +143,21 @@ async function esnCargarNoticias() {
     files.map(async file => {
       const raw = await (await fetch(file.download_url)).text();
       const { data, body } = esnParseFrontMatter(raw);
+
+      // "categorias" (nuevo, varias) tiene prioridad; si no existe, se usa
+      // "categoria" (antiguo, una sola) para no romper noticias ya publicadas.
+      let categorias = data.categorias;
+      if (!categorias) {
+        categorias = data.categoria ? [data.categoria] : ["Nacional"];
+      } else if (!Array.isArray(categorias)) {
+        categorias = [categorias];
+      }
+
       return {
         slug: esnSlugFromFilename(file.name),
         title: data.title || "(Sin título)",
-        categoria: data.categoria || "Nacional",
+        categorias: categorias,
+        categoria: categorias[0], // categoría principal, para color/insignia
         date: data.date || "",
         autor: data.autor || "Redacción EsNoticias",
         imagen: data.imagen || "",
@@ -120,12 +178,17 @@ function esnCardHtml(n, variant) {
   const img = n.imagen
     ? `<img src="${esnEscapeHtml(n.imagen)}" alt="">`
     : "";
+  const extraCats = n.categorias.slice(1);
+  const extraCatsHtml = extraCats.length
+    ? ` <span style="color:var(--slate);font-weight:400;">+ ${extraCats.map(esnEscapeHtml).join(", ")}</span>`
+    : "";
+
   if (variant === "lead") {
     return `
       <article class="lead">
         <a href="noticia.html?n=${encodeURIComponent(n.slug)}" style="display:block;">
           <div class="lead-img">${img}<span class="badge">${esnEscapeHtml(n.categoria)}</span></div>
-          <div class="cat-bar"><span class="eyebrow" style="color:var(--red);">${esnEscapeHtml(n.categoria)}</span>
+          <div class="cat-bar"><span class="eyebrow" style="color:var(--red);">${esnEscapeHtml(n.categoria)}${extraCatsHtml}</span>
           <h1>${esnEscapeHtml(n.title)}</h1></div>
           <p class="dek">${esnEscapeHtml(n.resumen)}</p>
           <div class="byline"><span>${esnEscapeHtml(n.autor)}</span><span class="dot"></span><span>${esnFormatFecha(n.date)}</span></div>
@@ -136,7 +199,7 @@ function esnCardHtml(n, variant) {
     return `
       <div class="side-card">
         <a href="noticia.html?n=${encodeURIComponent(n.slug)}">
-          <div class="cat-bar ${color}"><span class="eyebrow" style="color:var(--${color});">${esnEscapeHtml(n.categoria)}</span>
+          <div class="cat-bar ${color}"><span class="eyebrow" style="color:var(--${color});">${esnEscapeHtml(n.categoria)}${extraCatsHtml}</span>
           <h3>${esnEscapeHtml(n.title)}</h3></div>
           <p class="dek-sm">${esnEscapeHtml(n.resumen)}</p>
         </a>
@@ -149,7 +212,7 @@ function esnCardHtml(n, variant) {
         <div class="thumb">${img}</div>
         <h3>${esnEscapeHtml(n.title)}</h3>
         <p class="dek-sm">${esnEscapeHtml(n.resumen)}</p>
-        <div class="byline">${esnEscapeHtml(n.categoria)} · ${esnFormatFecha(n.date)}</div>
+        <div class="byline">${esnEscapeHtml(n.categoria)}${extraCatsHtml} · ${esnFormatFecha(n.date)}</div>
       </a>
     </article>`;
 }
@@ -167,8 +230,8 @@ async function esnRenderPortada() {
     }
     const [primera, ...resto] = noticias;
     const laterales = resto.slice(0, 3);
-    const gridNacional = noticias.filter(n => n.categoria === "Nacional").slice(0, 3);
-    const gridInternacional = noticias.filter(n => n.categoria === "Internacional").slice(0, 3);
+    const gridNacional = noticias.filter(n => n.categorias.includes("Nacional")).slice(0, 3);
+    const gridInternacional = noticias.filter(n => n.categorias.includes("Internacional")).slice(0, 3);
 
     let html = `<section class="hero">`;
     html += esnCardHtml(primera, "lead");
@@ -207,7 +270,7 @@ async function esnRenderSeccion() {
   if (titulo) titulo.textContent = cat;
 
   try {
-    const noticias = (await esnCargarNoticias()).filter(n => n.categoria === cat);
+    const noticias = (await esnCargarNoticias()).filter(n => n.categorias.includes(cat));
     if (noticias.length === 0) {
       cont.innerHTML = `<p style="padding:40px 0;color:var(--slate);">Todavía no hay noticias en esta sección.</p>`;
       return;
@@ -235,9 +298,10 @@ async function esnRenderNoticia() {
     }
     document.title = `${n.title} — EsNoticias`;
     const img = n.imagen ? `<div class="lead-img"><img src="${esnEscapeHtml(n.imagen)}" alt=""></div>` : "";
+    const catsHtml = n.categorias.map(esnEscapeHtml).join(" · ");
     cont.innerHTML = `
       <article style="max-width:760px;margin:0 auto;padding:40px 20px;">
-        <span class="eyebrow" style="color:var(--red);">${esnEscapeHtml(n.categoria)}</span>
+        <span class="eyebrow" style="color:var(--red);">${catsHtml}</span>
         <h1 style="font-size:34px;margin:10px 0 14px;">${esnEscapeHtml(n.title)}</h1>
         <div class="byline" style="margin-bottom:20px;"><span>${esnEscapeHtml(n.autor)}</span><span class="dot"></span><span>${esnFormatFecha(n.date)}</span></div>
         ${img}
