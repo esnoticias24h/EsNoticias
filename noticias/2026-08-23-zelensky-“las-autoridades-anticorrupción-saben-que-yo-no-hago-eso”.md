@@ -1,6 +1,6 @@
 ---
 title: "Zelensky: “Las autoridades anticorrupción saben que yo no hago eso”"
-categoria: Ucrania
+categoria: Internacional
 date: 2026-08-23T14:00:00.000+02:00
 autor: Redacción EsNoticias
 imagen: /images/uploads/36dbf2bae8a26d957aef1f0084c58ee1.webp
