@@ -73,7 +73,7 @@
   .logo{font-family:'Bitter',serif;font-weight:900;font-size:32px;letter-spacing:-0.01em;}
   .logo span{color:var(--red);}
   .masthead-right{display:flex;align-items:center;gap:22px;}
-  .date-label{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--slate);text-transform:capitalize;}
+  .date-label{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--slate);white-space:nowrap;}
   .icon-btn{width:36px;height:36px;border-radius:50%;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;cursor:pointer;background:none;}
   .subscribe-btn{
     background:var(--ink);color:var(--paper);font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600;
@@ -174,6 +174,7 @@
     .newsletter-inner{flex-direction:column;align-items:flex-start;}
     .newsletter-form{width:100%;}
     .newsletter-form input{width:100%;}
+    .date-label{display:none;}
   }
 </style>
 </head>
@@ -183,14 +184,14 @@
   <div class="ticker-tag">Última hora</div>
   <div class="ticker-track-wrap">
     <div class="ticker-track" id="tickerTrack">
-      <span>El Congreso debate hoy la nueva ley de vivienda</span>
-      <span>La inflación interanual se sitúa en el 2,3%</span>
+      <span>Guerra comercial EEUU-Canada se intensifica con nuevos aranceles</span>
+      <span>Rusia captura la ciudad Ucraniana de Siversk</span>
+      <span>Un terremoto de magnitud 5,9 sacude Japón</span>
+      <span>Continuan las replicas sismicas en Granada</span>
+      <span>El 28 de agosto habrá un eclipse lunar parcial</span>
+      <span>Colonos israelíes mantienen el asedio a familias en Qusra (Cisjordania) por 15 días</span>
       <span>Cumbre europea sobre energía se celebrará en octubre</span>
-      <span>Selección nacional confirma convocatoria para el próximo amistoso</span>
-      <span>El Congreso debate hoy la nueva ley de vivienda</span>
-      <span>La inflación interanual se sitúa en el 2,3%</span>
-      <span>Cumbre europea sobre energía se celebrará en octubre</span>
-      <span>Selección nacional confirma convocatoria para el próximo amistoso</span>
+      <span>El número de muertos en Gaza supera los 73.400 desde octubre de 2023</span>
     </div>
   </div>
 </div>
@@ -296,7 +297,8 @@
 <script>
   const dateLabel = document.getElementById('dateLabel');
   const today = new Date();
-  dateLabel.textContent = today.toLocaleDateString('es-ES', { weekday: 'long', day: 'numeric', month: 'long' });
+  const fecha = today.toLocaleDateString('es-ES', { weekday: 'long', day: 'numeric', month: 'long' });
+  dateLabel.textContent = fecha.charAt(0).toUpperCase() + fecha.slice(1);
 </script>
 <script src="assets/noticias.js"></script>
 <script>esnRenderPortada();</script>
