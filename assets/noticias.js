@@ -56,7 +56,6 @@ function esnMarkdownToHtml(md) {
     })
     .join("\n");
 }
-}
 
 // Parser de "front matter" YAML (líneas entre --- ... ---).
 // Soporta valores simples y listas (formato bloque "- item" o formato en línea ["a","b"]),
@@ -256,7 +255,6 @@ async function esnRenderPortada() {
     const [primera, ...resto] = noticias;
     const laterales = resto.slice(0, 3);
     const gridNacional = noticias.filter(n => n.categorias.includes("Nacional")).slice(0, 3);
-    const gridInternacional = noticias.filter(n => n.categorias.includes("Internacional")).slice(0, 3);
 
     let html = `<section class="hero">`;
     html += esnCardHtml(primera, "lead");
@@ -268,12 +266,6 @@ async function esnRenderPortada() {
       html += `<section class="section-block"><div class="section-head"><h2 style="border-left:4px solid var(--red); padding-left:12px;">Nacional</h2>
         <a href="seccion.html?cat=Nacional" class="see-all">Ver todo →</a></div><div class="card-grid">`;
       gridNacional.forEach(n => (html += esnCardHtml(n, "grid")));
-      html += `</div></section>`;
-    }
-    if (gridInternacional.length) {
-      html += `<section class="section-block"><div class="section-head"><h2 style="border-left:4px solid var(--blue); padding-left:12px;">Internacional</h2>
-        <a href="seccion.html?cat=Internacional" class="see-all">Ver todo →</a></div><div class="card-grid">`;
-      gridInternacional.forEach(n => (html += esnCardHtml(n, "grid")));
       html += `</div></section>`;
     }
 
