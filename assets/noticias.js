@@ -26,11 +26,36 @@ function esnMarkdownToHtml(md) {
       let html = esnEscapeHtml(p.trim());
       html = html.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
       html = html.replace(/\*(.+?)\*/g, "<em>$1</em>");
-      html = html.replace(/\[(.+?)\]\((.+?)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
+
+      // Guardamos los enlaces para que no se pisen entre sí al procesarlos
+      const enlaces = [];
+
+      // Formato [texto](url)
+      html = html.replace(/\[(.+?)\]\((.+?)\)/g, (m, texto, url) => {
+        enlaces.push(`<a href="${url}" target="_blank" rel="noopener">${texto}</a>`);
+        return `%%ESNLINK${enlaces.length - 1}%%`;
+      });
+
+      // Formato <https://...>
+      html = html.replace(/&lt;(https?:\/\/[^\s&]+?)&gt;/g, (m, url) => {
+        enlaces.push(`<a href="${url}" target="_blank" rel="noopener">${url}</a>`);
+        return `%%ESNLINK${enlaces.length - 1}%%`;
+      });
+
+      // URL suelta, sin marcar de ninguna forma
+      html = html.replace(/(https?:\/\/[^\s<]+)/g, (m, url) => {
+        enlaces.push(`<a href="${url}" target="_blank" rel="noopener">${url}</a>`);
+        return `%%ESNLINK${enlaces.length - 1}%%`;
+      });
+
+      // Restauramos los enlaces ya construidos
+      html = html.replace(/%%ESNLINK(\d+)%%/g, (m, i) => enlaces[i]);
+
       html = html.replace(/\n/g, "<br>");
       return `<p>${html}</p>`;
     })
     .join("\n");
+}
 }
 
 // Parser de "front matter" YAML (líneas entre --- ... ---).
