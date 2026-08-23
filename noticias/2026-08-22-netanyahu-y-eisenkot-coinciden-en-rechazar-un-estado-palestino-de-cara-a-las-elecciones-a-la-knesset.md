@@ -1,6 +1,5 @@
 ---
-title: Netanyahu y Eisenkot coinciden en rechazar un Estado palestino de cara a
-  las elecciones a la Knesset.
+title: Netanyahu y Eisenkot coinciden en rechazar un Estado palestino.
 categoria: Palestina
 date: 2026-08-22T22:38:00.000+02:00
 autor: "Redacción EsNoticias "
@@ -10,6 +9,8 @@ resumen: El primer ministro israelí, Benjamin Netanyahu, y el líder de Yesh
   establecimiento de un Estado palestino, en un contexto de intensa polarización
   política de cara a las elecciones legislativas del 27 de octubre.
 ---
+El primer ministro israelí, Benjamin Netanyahu, y el líder de Yesh Atid, Gadi Eisenkot, han coincidido públicamente en su oposición al establecimiento de un Estado palestino, en un contexto de intensa polarización política de cara a las elecciones legislativas del 27 de octubre.
+
 Netanyahu reiteró su firme rechazo a cualquier entidad palestina soberana tanto en la Franja de Gaza como en Cisjordania. “Mientras yo sea primer ministro, no habrá ningún Estado palestino controlado por Irán, ni en Gaza ni en Cisjordania. Punto”, declaró. El líder del Likud presentó esta postura como una garantía de seguridad frente a lo que considera amenazas regionales y acusó a la “alianza de izquierda” de poner en riesgo los intereses de Israel.
 
 Poco después, Gadi Eisenkot respondió en la misma línea. El exjefe del Estado Mayor afirmó que el gobierno que pretende formar tampoco permitirá el nacimiento de una entidad política palestina. La convergencia de ambos líderes, pese a su rivalidad electoral, cierra prácticamente cualquier ventana a un proceso político a corto plazo y convierte la cuestión palestina en moneda de cambio de la campaña.
