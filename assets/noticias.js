@@ -241,7 +241,7 @@ async function esnRenderNoticia() {
         <h1 style="font-size:34px;margin:10px 0 14px;">${esnEscapeHtml(n.title)}</h1>
         <div class="byline" style="margin-bottom:20px;"><span>${esnEscapeHtml(n.autor)}</span><span class="dot"></span><span>${esnFormatFecha(n.date)}</span></div>
         ${img}
-        <div style="font-size:17px;line-height:1.7;margin-top:20px;">${n.bodyHtml}</div>
+        <div style="font-size:17px;line-height:1.7;margin-top:20px;text-align:justify;hyphens:auto;">${n.bodyHtml}</div>
       </article>`;
   } catch (err) {
     cont.innerHTML = `<p style="padding:40px 0;color:var(--red);">No se han podido cargar las noticias (${esnEscapeHtml(err.message)}).</p>`;
