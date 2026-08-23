@@ -1,6 +1,6 @@
 ---
 title: Meloni admite que su relación con Trump no ha sido tan fácil como esperaba.
-categoria: Internacional
+categoria: Europa
 date: 2026-08-22T09:20:00.000+02:00
 autor: Redacción EsNoticias
 imagen: /images/uploads/cffcc482bba51bf08f9cfbad243b1d43.webp
