@@ -6,7 +6,7 @@ autor: Redacción EsNoticias
 imagen: /images/uploads/36dbf2bae8a26d957aef1f0084c58ee1.webp
 resumen: "Zelensky: “Las autoridades anticorrupción saben que yo no hago eso”"
 ---
-**El presidente de Ucrania, Volodymyr Zelensky, aseguró este domingo que los responsables de los organismos anticorrupción no tienen preguntas directas sobre él y entienden que no está involucrado en actividades corruptas.**
+El presidente de Ucrania, Volodymyr Zelensky, aseguró este domingo que los responsables de los organismos anticorrupción no tienen preguntas directas sobre él y entienden que no está involucrado en actividades corruptas.
 
 Zelensky se pronunció sobre los casos que afectan a antiguos miembros de la Oficina del Presidente, en particular a la exjefa adjunta Iryna Mudra. Según el mandatario, no dispone de información adicional más allá de la que ya es pública.
 
