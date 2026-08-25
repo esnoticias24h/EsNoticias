@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Página no encontrada — EsNoticias</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@500;700;900&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#14161A;
+    --ink-soft:#2A2D34;
+    --paper:#FAFAF7;
+    --paper-dim:#F0EEE8;
+    --red:#E63946;
+    --slate:#6B7280;
+    --line: rgba(20,22,26,0.12);
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;height:100%;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    -webkit-font-smoothing:antialiased;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    min-height:100vh;
+  }
+  a{color:inherit;text-decoration:none;}
+  .wrap404{
+    text-align:center;
+    max-width:480px;
+    padding:24px;
+  }
+  .logo{font-family:'Bitter',serif;font-weight:900;font-size:32px;letter-spacing:-0.01em;margin-bottom:40px;}
+  .logo span{color:var(--red);}
+  .code{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:15px;
+    font-weight:600;
+    color:var(--red);
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    margin-bottom:10px;
+  }
+  h1{
+    font-family:'Bitter',serif;
+    font-size:32px;
+    margin:0 0 16px;
+    line-height:1.2;
+  }
+  p{
+    font-size:16px;
+    color:var(--slate);
+    line-height:1.6;
+    margin:0 0 32px;
+  }
+  .btn{
+    display:inline-block;
+    background:var(--ink);
+    color:var(--paper);
+    font-family:'IBM Plex Mono',monospace;
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:0.03em;
+    padding:14px 28px;
+    border-radius:2px;
+  }
+  .btn:hover{background:var(--red);}
+</style>
+</head>
+<body>
+
+  <div class="wrap404">
+    <div class="logo">Es<span>Noticias</span></div>
+    <div class="code">Error 404</div>
+    <h1>No hemos encontrado esta página</h1>
+    <p>Puede que el enlace esté roto o que la noticia ya no esté disponible. Vuelve a la portada para seguir leyendo.</p>
+    <a href="/" class="btn">Ir a la portada</a>
+  </div>
+
+</body>
+</html>
