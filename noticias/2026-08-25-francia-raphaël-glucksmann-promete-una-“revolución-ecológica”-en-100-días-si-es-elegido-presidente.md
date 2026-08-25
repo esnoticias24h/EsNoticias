@@ -1,6 +1,5 @@
 ---
-title: "Francia: Raphaël Glucksmann promete una “revolución ecológica” en 100
-  días si es elegido presidente."
+title: "Francia: Raphaël Glucksmann promete una “revolución ecológica”."
 categorias:
   - Europa
 date: 2026-08-25T17:00:00.000+02:00
