@@ -1,8 +1,7 @@
 ---
 title: "Sanidad andaluza: entrevista a una ciudadana anónima."
 categorias:
-  - Actualidad
-  - Opinión
+  - Entrevistas
 date: 2026-08-25T20:00:00.000+02:00
 autor: Redacción EsNoticias
 imagen: /images/uploads/descarga.png
