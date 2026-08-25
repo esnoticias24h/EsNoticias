@@ -3,7 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EsNoticias — Información clara, sin ruido.</title>
+<title>EsNoticias — Información clara, sin ruido</title>
+<meta name="description" content="EsNoticias — información clara y contrastada sobre actualidad, política, economía e internacional, sin ruido.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="EsNoticias">
+<meta property="og:title" content="EsNoticias — Información clara, sin ruido">
+<meta property="og:description" content="Noticias de actualidad, política, economía e internacional, actualizadas al minuto.">
+<meta property="og:url" content="https://es-noticias.vercel.app/noticia.html">
+<meta property="og:image" content="https://es-noticias.vercel.app/assets/og-default.jpg">
+<meta property="og:locale" content="es_ES">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="EsNoticias — Información clara, sin ruido">
+<meta name="twitter:description" content="Noticias de actualidad, política, economía e internacional, actualizadas al minuto.">
+<meta name="twitter:image" content="https://es-noticias.vercel.app/assets/og-default.jpg">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -61,8 +74,8 @@
   .logo{font-family:'Bitter',serif;font-weight:900;font-size:32px;letter-spacing:-0.01em;}
   .logo span{color:var(--red);}
   .masthead-right{display:flex;align-items:center;gap:22px;}
-  .date-label{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--slate);text-transform:capitalize;}
-  .icon-btn{width:36px;height:36px;border-radius:50%;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;cursor:pointer;}
+  .date-label{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--slate);white-space:nowrap;}
+  .icon-btn{width:36px;height:36px;border-radius:50%;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;cursor:pointer;background:none;}
   .subscribe-btn{
     background:var(--ink);color:var(--paper);font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600;
     padding:10px 18px;border-radius:2px;letter-spacing:0.03em;cursor:pointer;border:none;
@@ -145,6 +158,7 @@
     .newsletter-inner{flex-direction:column;align-items:flex-start;}
     .newsletter-form{width:100%;}
     .newsletter-form input{width:100%;}
+    .date-label{display:none;}
   }
 </style>
 </head>
@@ -165,6 +179,16 @@
     </div>
   </div>
 </div>
+
+<div class="wrap">
+
+  <div class="masthead">
+    <a href="index.html" class="logo">Es<span>Noticias</span></a>
+    <div class="masthead-right">
+      <span class="date-label" id="dateLabel"></span>
+      <a class="icon-btn" href="index.html" title="Buscar">🔍</a>
+    </div>
+  </div>
 
   <nav class="nav">
     <a href="index.html">Portada</a>
@@ -195,17 +219,45 @@
   </div>
 
   <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="logo">Es<span>Noticias</span></div>
+        <p>Información clara y contrastada sobre lo que ocurre en España y en el mundo.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Secciones</h4>
+        <a href="seccion.html?cat=Nacional">Nacional</a>
+        <a href="seccion.html?cat=Pol%C3%ADtica">Política</a>
+        <a href="seccion.html?cat=Econom%C3%ADa">Economía</a>
+        <a href="seccion.html?cat=Sucesos">Sucesos</a>
+      </div>
+      <div class="footer-col">
+        <h4>Más</h4>
+        <a href="seccion.html?cat=Sociedad">Sociedad</a>
+        <a href="seccion.html?cat=Cultura">Cultura</a>
+        <a href="seccion.html?cat=Deportes">Deportes</a>
+        <a href="seccion.html?cat=Tecnolog%C3%ADa">Tecnología</a>
+        <a href="seccion.html?cat=Opini%C3%B3n">Opinión</a>
+      </div>
+      <div class="footer-col">
+        <h4>El medio</h4>
+        <a href="quienes-somos.html">Quiénes somos</a>
+        <a href="contacto.html">Contacto</a>
+      </div>
+    </div>
     <div class="footer-bottom">
       <span>© 2026 EsNoticias. Todos los derechos reservados.</span>
-      <a href="index.html" style="color:var(--red);">Volver a portada</a>
+      <span>Aviso legal · Privacidad · Cookies</span>
     </div>
   </footer>
 
 </div>
 
 <script>
-  document.getElementById('dateLabel') && (document.getElementById('dateLabel').textContent =
-    new Date().toLocaleDateString('es-ES', { weekday: 'long', day: 'numeric', month: 'long' }));
+  const dateLabel = document.getElementById('dateLabel');
+  const today = new Date();
+  const fecha = today.toLocaleDateString('es-ES', { weekday: 'long', day: 'numeric', month: 'long' });
+  dateLabel.textContent = fecha.charAt(0).toUpperCase() + fecha.slice(1);
 </script>
 <script src="assets/noticias.js"></script>
 <script>esnRenderNoticia();</script>
