@@ -32,7 +32,7 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - { label: "Título", name: "title", widget: "string" }
-      - { label: "Categorías", name: "categorias", widget: "select", multiple: true, min: 1, options: ["Actualidad", "Nacional", "Internacional", "Europa", "Palestina", "Sáhara Occidental", "Ucrania", "América", "Asia", "Oriente Medio", "Política", "Economía", "Sociedad", "Sucesos", "Cultura", "Deportes", "Tecnología", "Ciencia", "Salud", "Opinión", "Otros"] }
+      - { label: "Categorías", name: "categorias", widget: "select", multiple: true, min: 1, options: ["Actualidad", "Nacional", "Entrevistas", "Europa", "Palestina", "Sáhara Occidental", "Ucrania", "América", "Asia", "Oriente Medio", "Política", "Economía", "Sociedad", "Sucesos", "Cultura", "Deportes", "Tecnología", "Ciencia", "Salud", "Opinión", "Otros"] }
       - { label: "Fecha", name: "date", widget: "datetime" }
       - { label: "Autor", name: "autor", widget: "string", default: "Redacción EsNoticias" }
       - { label: "Imagen destacada", name: "imagen", widget: "image", required: false }
