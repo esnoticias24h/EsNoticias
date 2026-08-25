@@ -65,4 +65,4 @@ Esta es la primera entrevista que publicamos. Queremos dar voz a quienes, como "
 
 Si tú también quieres ser entrevistado o contarnos tu caso —ya sea relacionado con la sanidad, la dependencia, la discapacidad u otros servicios públicos—, (o cualquier tema general realmente) puedes ponerte en contacto con nosotros a través de nuestro correo electrónico o mediante cualquiera de nuestras redes sociales. Tu testimonio es importante. 
 
-Actualmente todavía estamos en proceso de montarlo todo en condiciones. Esperamos que a partir de septiembre podamos llevar un ritmo más normal. Somos pocas personas trabajando en el proyecto. Esta web solo es de prueba provisional, esperamos que en el futuro poder montar una más apañada.
+Actualmente todavía estamos en proceso de montarlo todo en condiciones. Esperamos que a partir de septiembre podamos llevar un ritmo más normal. Somos pocas personas trabajando en el proyecto. Esta web solo es de prueba provisional, esperamos que en el futuro podamos montar una más apañada.
