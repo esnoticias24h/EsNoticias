@@ -4,7 +4,7 @@ categorias:
   - Entrevistas
 date: 2026-08-25T20:00:00.000+02:00
 autor: Redacción EsNoticias
-imagen: /images/uploads/descarga.png
+imagen: /images/uploads/logo_junta_sin_verde_big.jpg
 resumen: Una ciudadana anónima nos cuenta, sin filtros, su experiencia con las
   listas de espera, la atención primaria y las dificultades que encuentra a
   diario en el sistema sanitario de Andalucía.
