@@ -53,8 +53,6 @@ Lucía: Definiría la situación en Andalucía como un colapso, o lo más cercan
 
 La situación en dependencia también está bastante mal. Una de mis abuelas padece demencia senil y estuvo más de dos años para que le reconocieran las prestaciones de dependencia destinadas al familiar que la cuida. Por el resto de servicios, según lo que he leído, tampoco es que vayan especialmente bien. En educación hace años que no estudio, no tengo un mal recuerdo por lo general ni de que fuera mal, la única pega es que mi centro no estaba aclimatado, pero he de decir que eso lo estaban solucionando el ultimo año en el que estuve. 
 
-Me gustaría volver a formarme en algún momento de mi vida, pero no creo que eso sea posible por mi situación de salud. Pero quien sabe, nunca hay que tirar la toalla. 
-
 ***FIN***
 
 Gracias por dedicar tu tiempo a leer esta entrevista.
