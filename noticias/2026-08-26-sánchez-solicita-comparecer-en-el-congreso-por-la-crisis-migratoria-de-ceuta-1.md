@@ -6,8 +6,8 @@ categorias:
 date: 2026-08-26T11:00:00.000+02:00
 autor: Redacción EsNoticias
 imagen: /images/uploads/pedro-sanchez.webp
-resumen: "El presidente del Gobierno, Pedro Sánchez, ha solicitado formalmente
-  comparecer ante el Pleno del Congreso el próximo 9 de septiembre. "
+resumen: "Pedro Sánchez, ha solicitado formalmente comparecer ante el Pleno del
+  Congreso el próximo 9 de septiembre. "
 ---
 El presidente del Gobierno, Pedro Sánchez, ha pedido formalmente comparecer ante el Pleno del Congreso para dar cuenta de la gestión del Ejecutivo ante la entrada masiva de migrantes registrada en Ceuta el pasado 30 de julio. Según fuentes del Gobierno, la fecha propuesta a los grupos parlamentarios es el 9 de septiembre, coincidiendo con el primer pleno del periodo ordinario de sesiones.
 
