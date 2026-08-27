@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EsNoticias — Información clara, sin ruido</title>
+<title>Contacto — EsNoticias</title>
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,10 +15,6 @@
     --paper:#FAFAF7;
     --paper-dim:#F0EEE8;
     --red:#E63946;
-    --red-dark:#A5202B;
-    --blue:#2451FF;
-    --blue-dark:#173AB8;
-    --amber:#E8A317;
     --slate:#6B7280;
     --line: rgba(20,22,26,0.12);
   }
@@ -31,8 +27,7 @@
     -webkit-font-smoothing:antialiased;
   }
   a{color:inherit;text-decoration:none;}
-  img{display:block;width:100%;height:100%;object-fit:cover;}
-  h1,h2,h3{font-family:'Bitter',serif;margin:0;line-height:1.08;}
+  h1{font-family:'Bitter',serif;margin:0;line-height:1.08;}
   .eyebrow{
     font-family:'IBM Plex Mono',monospace;
     font-size:11px;
@@ -61,12 +56,8 @@
   .logo{font-family:'Bitter',serif;font-weight:900;font-size:32px;letter-spacing:-0.01em;}
   .logo span{color:var(--red);}
   .masthead-right{display:flex;align-items:center;gap:22px;}
-  .date-label{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--slate);text-transform:capitalize;}
-  .icon-btn{width:36px;height:36px;border-radius:50%;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;cursor:pointer;}
-  .subscribe-btn{
-    background:var(--ink);color:var(--paper);font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600;
-    padding:10px 18px;border-radius:2px;letter-spacing:0.03em;cursor:pointer;border:none;
-  }
+  .date-label{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--slate);white-space:nowrap;}
+  .icon-btn{width:36px;height:36px;border-radius:50%;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;cursor:pointer;background:none;}
 
   /* Nav */
   .nav{display:flex;align-items:center;gap:6px;padding:14px 0;overflow-x:auto;border-bottom:1px solid var(--line);}
@@ -75,76 +66,13 @@
   }
   .nav a.active{background:var(--ink);color:var(--paper);}
   .nav a:not(.active):hover{background:var(--paper-dim);}
-  .nav .more{color:var(--slate);border:1px dashed var(--line);}
-
-  /* Hero */
-  .hero{display:grid;grid-template-columns:1.55fr 1fr;gap:36px;padding:38px 0 46px;}
-  .cat-bar{border-left:4px solid var(--red);padding-left:12px;}
-  .cat-bar.blue{border-color:var(--blue);}
-  .cat-bar.amber{border-color:var(--amber);}
-  .cat-bar.gray{border-color:var(--slate);}
-  .lead-img{aspect-ratio:16/10;background:linear-gradient(135deg,#3A3F4B,#14161A);border-radius:3px;margin-bottom:18px;position:relative;overflow:hidden;}
-  .lead-img .badge{
-    position:absolute;top:14px;left:14px;background:var(--red);color:#fff;font-family:'IBM Plex Mono',monospace;
-    font-size:11px;font-weight:600;letter-spacing:0.05em;padding:5px 10px;
-  }
-  .lead h1{font-size:38px;margin:10px 0 12px;}
-  .dek{font-size:16px;color:var(--ink-soft);line-height:1.5;margin-bottom:14px;max-width:56ch;}
-  .byline{font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--slate);display:flex;gap:10px;align-items:center;}
-  .byline .dot{width:3px;height:3px;background:var(--slate);border-radius:50%;}
-
-  .side-stack{display:flex;flex-direction:column;gap:22px;}
-  .side-card{padding-bottom:22px;border-bottom:1px solid var(--line);}
-  .side-card:last-child{border-bottom:none;padding-bottom:0;}
-  .side-card h3{font-size:18px;margin:8px 0 6px;}
-  .side-card .dek-sm{font-size:13.5px;color:var(--slate);line-height:1.5;}
-
-  /* Section blocks */
-  .section-block{padding:42px 0;border-top:1px solid var(--line);}
-  .section-head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:24px;}
-  .section-head h2{font-size:24px;}
-  .section-head .see-all{font-family:'IBM Plex Mono',monospace;font-size:11.5px;font-weight:600;color:var(--slate);text-transform:uppercase;letter-spacing:0.04em;}
-  .card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
-  .story-card .thumb{aspect-ratio:4/3;border-radius:3px;margin-bottom:12px;background:linear-gradient(135deg,#DCD9CF,#B8B4A6);}
-  .story-card.intl .thumb{background:linear-gradient(135deg,#C9D8FF,#7E9CFF);}
-  .story-card h3{font-size:17px;margin:0 0 8px;}
-  .story-card .dek-sm{font-size:13px;color:var(--slate);line-height:1.5;margin-bottom:8px;}
-  .story-card .byline{font-size:11px;}
-
-  /* Newsletter */
-  .newsletter{background:var(--ink);color:var(--paper);padding:52px 0;margin-top:12px;}
-  .newsletter-inner{display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;}
-  .newsletter h2{color:var(--paper);font-size:26px;max-width:420px;}
-  .newsletter p{color:#B7B9BF;font-size:14px;margin-top:8px;max-width:420px;}
-  .newsletter-form{display:flex;gap:10px;flex-shrink:0;}
-  .newsletter-form input{
-    background:transparent;border:1px solid #444750;color:var(--paper);padding:12px 14px;font-size:13px;
-    font-family:'Inter',sans-serif;width:240px;border-radius:2px;
-  }
-  .newsletter-form input::placeholder{color:#8A8D96;}
-  .newsletter-form button{
-    background:var(--red);color:#fff;border:none;padding:12px 20px;font-family:'IBM Plex Mono',monospace;
-    font-size:12px;font-weight:600;letter-spacing:0.03em;cursor:pointer;border-radius:2px;
-  }
 
   /* Footer */
   footer{padding:44px 0 30px;border-top:1px solid var(--line);}
-  .footer-grid{display:grid;grid-template-columns:1.4fr repeat(4,1fr);gap:28px;margin-bottom:34px;}
-  .footer-grid .logo{font-size:22px;margin-bottom:10px;}
-  .footer-grid p{font-size:13px;color:var(--slate);line-height:1.6;max-width:32ch;}
-  .footer-col h4{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.06em;text-transform:uppercase;color:var(--slate);margin-bottom:12px;}
-  .footer-col a{display:block;font-size:13.5px;padding:5px 0;color:var(--ink-soft);}
-  .footer-col a:hover{color:var(--red);}
-  .footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:22px;border-top:1px solid var(--line);font-size:12px;color:var(--slate);flex-wrap:wrap;gap:10px;}
+  .footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:22px;font-size:12px;color:var(--slate);flex-wrap:wrap;gap:10px;}
 
   @media (max-width:860px){
-    .hero{grid-template-columns:1fr;}
-    .card-grid{grid-template-columns:1fr;}
-    .footer-grid{grid-template-columns:1fr 1fr;}
-    .lead h1{font-size:28px;}
-    .newsletter-inner{flex-direction:column;align-items:flex-start;}
-    .newsletter-form{width:100%;}
-    .newsletter-form input{width:100%;}
+    .date-label{display:none;}
   }
 </style>
 </head>
@@ -166,10 +94,21 @@
   </div>
 </div>
 
+<div class="wrap">
+
+  <div class="masthead">
+    <a href="index.html" class="logo">Es<span>Noticias</span></a>
+    <div class="masthead-right">
+      <span class="date-label" id="dateLabel"></span>
+      <a class="icon-btn" href="index.html" title="Buscar">🔍</a>
+    </div>
+  </div>
+
   <nav class="nav">
     <a href="index.html">Portada</a>
     <a href="seccion.html?cat=Actualidad">Actualidad</a>
     <a href="seccion.html?cat=Nacional">Nacional</a>
+    <a href="seccion.html?cat=Entrevistas">Entrevistas</a>
     <a href="seccion.html?cat=Europa">Europa</a>
     <a href="seccion.html?cat=Palestina">Palestina</a>
     <a href="seccion.html?cat=S%C3%A1hara%20Occidental">Sáhara Occidental</a>
@@ -190,7 +129,7 @@
     <a href="seccion.html?cat=Otros">Otros</a>
   </nav>
 
-  <article style="max-width:720px;margin:0 auto;padding:50px 0 60px;">
+  <article style="max-width:720px;margin:0 auto;padding:50px 20px 60px;">
     <span class="eyebrow" style="color:var(--red);">El medio</span>
     <h1 style="font-size:34px;margin:10px 0 24px;">Contacto</h1>
 
@@ -205,9 +144,8 @@
       <p style="margin:24px 0;">
         <strong style="color:var(--ink);">Redes sociales:</strong><br>
         <!-- Cuando tengas los enlaces, sustituye estos "#" por tus perfiles reales -->
-        <a href="https://x.com/ESNoticias24h" style="color:var(--red);">X / Twitter</a> ·
-         <a href="https://bsky.app/profile/esnoticias24h.bsky.social" style="color:var(--red);">Bluesky</a> ·
-        <a href="https://www.instagram.com/esnoticias24h?igsi=MTYyNGp3cW5rcXR0" style="color:var(--red);">Instagram</a>
+        <a href="#" style="color:var(--red);">X / Twitter</a> ·
+        <a href="#" style="color:var(--red);">Instagram</a>
       </p>
 
       <p>Intentamos responder a todos los mensajes en un plazo razonable. Gracias por confiar en EsNoticias.</p>
@@ -222,5 +160,13 @@
   </footer>
 
 </div>
+
+<script>
+  const dateLabel = document.getElementById('dateLabel');
+  const today = new Date();
+  const fecha = today.toLocaleDateString('es-ES', { weekday: 'long', day: 'numeric', month: 'long' });
+  dateLabel.textContent = fecha.charAt(0).toUpperCase() + fecha.slice(1);
+</script>
+
 </body>
 </html>
