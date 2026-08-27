@@ -1,6 +1,5 @@
 ---
-title: Marine Le Pen, "ni engañada ni ingenua", pretende "responder preguntas y
-  convencer".
+title: Marine Le Pen, "ni engañada ni ingenua", pretende "responder y convencer".
 categorias:
   - Europa
   - Política
