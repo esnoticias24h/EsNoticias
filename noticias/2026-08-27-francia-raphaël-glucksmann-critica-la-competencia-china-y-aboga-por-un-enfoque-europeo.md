@@ -1,14 +1,12 @@
 ---
-title: "Francia: Raphaël Glucksmann critica la competencia china y aboga por un
-  enfoque europeo."
+title: Glucksmann critica la competencia china y aboga por un enfoque europeo.
 categorias:
   - Europa
   - Política
 date: 2026-08-27T18:20:00.000+02:00
 autor: Redacción EsNoticias
 imagen: /images/uploads/raphaël-glucksmann-2.jpg
-resumen: En materia industrial, Raphaël Glucksmann critica la competencia china
-  y aboga por un enfoque europeo.
+resumen: Francia - En materia industrial
 ---
 En lo que respecta a la reindustrialización, el ex eurodiputado criticó notablemente a los ex primeros ministros Edouard Philippe y Gabriel: "Cuando luchaba en el Parlamento Europeo para abordar todas estas cuestiones de soberanía, no conté con el apoyo del gobierno francés, ni en materia de defensa, ni en materia de defensa comercial, y mucho menos en la cuestión china".
 
