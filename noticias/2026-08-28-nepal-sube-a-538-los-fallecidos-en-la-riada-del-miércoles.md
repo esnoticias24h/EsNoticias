@@ -1,5 +1,5 @@
 ---
-title: Nepal sube a 538 los fallecidos en la riada del miércoles
+title: Nepal sube a 538 los fallecidos en la riada del miércoles.
 categorias:
   - Actualidad
   - Asia
