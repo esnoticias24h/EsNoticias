@@ -1,0 +1,31 @@
+---
+title: La jueza ordenó no informar a sus superiores del documento que señala a
+  Marruecos.
+categorias:
+  - Nacional
+  - Europa
+date: 2026-09-02T16:00:00.000+02:00
+autor: Redacción EsNoticias
+imagen: /images/uploads/pardo.jfif
+resumen: Un informe del CENIF remitido a la Audiencia Nacional atribuye a
+  gendarmes marroquíes la planificación de la entrada masiva de migrantes.
+---
+El director de la Policía dice a Marlaska que la jueza ordenó no informar a sus superiores del documento que señala a Marruecos en la crisis de Ceuta. 
+
+Un informe del CENIF remitido a la Audiencia Nacional atribuye a gendarmes marroquíes la planificación de la entrada masiva de migrantes del 30 y 31 de julio, mientras el Gobierno insiste en que no hay indicios de implicación de Rabat
+
+El Ministerio del Interior se ha visto envuelto este miércoles en una crisis interna después de que trascendiera la existencia de un informe policial que vincula a las fuerzas de seguridad marroquíes con la entrada masiva de más de 70.000 migrantes en Ceuta los pasados 30 y 31 de julio. El ministro Fernando Grande-Marlaska envió de madrugada una carta al director general de la Policía, Francisco Pardo, exigiéndole explicaciones sobre desde cuándo disponía de ese documento, cuya existencia había permanecido oculta para el propio departamento hasta que la reveló el digital El Español.
+
+El informe, elaborado por la Comisaría General de Extranjería y Fronteras (CENIF) a petición de la magistrada de la Audiencia Nacional María Tardón, sostiene que la avalancha migratoria no respondió a un movimiento espontáneo impulsado por mafias o por convocatorias en redes sociales, sino a una operación planificada por Marruecos para colapsar el sistema de control fronterizo español y neutralizar su capacidad de respuesta. Según el documento, de entre 50 y 60 páginas y acompañado de vídeos y fotografías, gendarmes marroquíes uniformados dirigieron a los migrantes desde Castillejos hacia el espigón de El Tarajal, mientras agentes de paisano no identificados daban indicaciones sobre el terreno.
+
+El texto describe tres oleadas diferenciadas: una primera, antes de las 11:00 horas del 30 de julio, formada por hombres jóvenes equipados con neopreno y aletas; una segunda, ya avanzado el día, con familias completas, mujeres, niños y migrantes subsaharianos; y una tercera, desde la noche del 30 de julio y durante el día siguiente, que replicó el perfil inicial. El hecho de que en torno al 90% de quienes entraron de forma irregular regresaran a Marruecos horas después se señala en el informe como indicio de que la operación buscaba saturar la frontera con personas vulnerables imposibles de repeler, no facilitar una migración real. El documento no atribuye ningún papel a mafias locales de Ceuta ni a Israel, y compara lo ocurrido con episodios similares registrados entre 2021 y 2024.
+
+El informe cobra especial relevancia porque contradice la versión que el Gobierno ha sostenido desde el estallido de la crisis. Tanto el presidente Pedro Sánchez como la ministra de Inclusión, Seguridad Social y Migraciones, Elma Saiz, y el ministro de Exteriores, José Manuel Albares, han insistido en que no existen indicios de implicación marroquí y han apuntado en cambio a una campaña de desinformación orquestada desde Rusia e Israel junto a la "internacional ultra". Esa tesis choca ahora con un documento elaborado por una unidad de inteligencia de la propia Policía Nacional española.
+
+A la controversia se suma una segunda capa de conflicto: el propio director general de la Policía ha trasladado a Marlaska que la jueza Tardón ordenó a los investigadores del CENIF no informar a sus superiores sobre la elaboración ni el contenido del informe mientras lo preparaban, motivo por el cual asegura que él no tuvo conocimiento previo del documento. Pardo ha añadido que, tras solicitar informes a las comisarías generales de Información y de Extranjería y Fronteras, no existe ningún informe policial que atribuya formalmente a las fuerzas marroquíes la planificación o ejecución de lo ocurrido los días 30 y 31 de julio, una afirmación que contrasta con el contenido del documento revelado por la prensa. Sobre la alerta que el CENIF remitió el 29 de julio a los puestos fronterizos —en la que hablaba de "riesgo extremo" de entrada masiva prevista para el día siguiente—, Pardo la ha descrito ante el ministro como una alerta de riesgo frecuente sin referencias explícitas a una entrada masiva inminente. Esa alerta previa, no obstante, coincide con lo que ya había planteado la ministra de Defensa, Margarita Robles, al afirmar que el CNI advirtió del riesgo un día antes, una versión que Marlaska había negado públicamente asegurando que no existió ningún informe de aviso. Tardón autorizó este miércoles que el equipo investigador comparta finalmente el informe con sus superiores.
+
+Desde Moncloa se ha pedido cautela hasta conocer el documento de forma oficial, aunque fuentes gubernamentales han reconocido sorpresa por que la información no fuera elevada antes, dado que afecta a la seguridad nacional, y han avanzado que la Policía "tendrá que dar explicaciones". El ministro de Política Territorial, Ángel Víctor Torres, al frente del mando único para la crisis, ha evitado pronunciarse sobre el contenido alegando desconocer si se trata de un informe con respaldo oficial o de la opinión particular de un agente.
+
+La oposición ha aprovechado la revelación para intensificar la presión sobre el Ejecutivo. El líder del PP, Alberto Núñez Feijóo, ha acusado al Gobierno de ocultar el papel activo de Marruecos y ha llegado a reclamar un adelanto electoral. Desde Izquierda Unida, socio del PSOE en el Gobierno de coalición, su coordinador federal, Antonio Maíllo, ha pedido la dimisión de Marlaska o del director general de la Policía y ha apuntado a una posible deslealtad de la cúpula policial hacia los gobiernos legítimos del país.
+
+El informe ha sido remitido a la Fiscalía de la Audiencia Nacional, que deberá determinar si existen indicios suficientes para investigar un presunto delito contra la independencia del Estado, a raíz de una denuncia presentada en agosto por el partido Iustitia Europa. La decisión final sobre si el caso se instruye en ese tribunal corresponde a la Fiscalía, conforme al artículo 25 de su Estatuto Orgánico.
